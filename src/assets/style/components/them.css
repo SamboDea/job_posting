@@ -1,0 +1,98 @@
+/* themeToggle.css */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(39, 158, 155);
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: transform 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: rgba(39, 158, 155);
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --primary-color: #0d6efd;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #0d6efd;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: var(--text-color) !important;
+  transition: color 0.3s ease;
+}
+
+/* .navbar {
+  background-color: var(--bg-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+.navbar .nav-link {
+  color: var(--text-color) !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(0);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
