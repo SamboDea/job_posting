@@ -33,10 +33,10 @@ const Header = () => {
             className="collapse navbar-collapse justify-content-end gap-4"
             id="navbarNavAltMarkup"
           >
-            <Link className="login text-docoration-none" to="/features">
+            <Link className="login text-docoration-none" to="/sign-in">
               Sign In
             </Link>
-            <Link className="sign-up" to="/mobile-app">
+            <Link className="sign-up" to="/sign-up">
               Sign Up
             </Link>
             <ThemeToggle />
