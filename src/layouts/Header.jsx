@@ -40,12 +40,24 @@ const Header = () => {
             className="collapse navbar-collapse justify-content-end gap-4"
             id="navbarNavAltMarkup"
           >
-            <Link className="login text-docoration-none" to="signin">
-              Sign In
-            </Link>
-            <Link className="sign-up" to="signup">
-              Sign Up
-            </Link>
+            {storedUser ? (
+              <Link
+                to="/profile"
+                className="profile-icon d-flex align-items-center"
+              >
+                {firstLetter}
+              </Link>
+            ) : (
+              <>
+                <Link className="login text-docoration-none" to="signin">
+                  Sign In
+                </Link>
+                <Link className="sign-up" to="signup">
+                  Sign Up
+                </Link>
+              </>
+            )}
+
             <ThemeToggle />
           </div>
         </div>
