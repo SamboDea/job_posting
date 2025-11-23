@@ -1,0 +1,162 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --bg-trasparent: rgba(39, 158, 155);
+  --text-job-list: rgba(39, 158, 155);
+  --bg-auth: #ffffff;
+  --shadow-auth: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --bg-trasparent: transparent;
+  --text-job-list: #ffffff;
+  --bg-auth: trasparent;
+  --shadow-auth: 0 0.5rem 1rem rgba(39, 158, 155);
+}
+.logo-auth {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+.logo-auth img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text-auth {
+  color: rgba(39, 158, 155) !important;
+}
+.job-seeker {
+  width: 145px !important;
+  padding: 3px 25px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: rgba(39, 158, 155) !important;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.job-seeker:hover {
+  width: 145px !important;
+  padding: 3px 25px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: rgba(39, 158, 155) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: white !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.job-seeker.active {
+  width: 145px !important;
+  padding: 3px 25px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: rgba(39, 158, 155) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: white !important;
+  text-align: center;
+  cursor: pointer;
+}
+.text-color-sign {
+  color: rgba(39, 158, 155);
+  text-decoration: none;
+}
+.card {
+  background-color: var(--bg-auth) !important;
+}
+.shadow-auth {
+  box-shadow: var(--shadow-auth);
+}
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.otp-input {
+  width: 45px;
+  height: 50px;
+  text-align: center;
+  font-size: 22px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.otp-input:focus {
+  border-color: #279e9b;
+  transform: scale(1.05);
+}
+
+.verify-container {
+  max-width: 380px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background: #279e9b;
+}
+.btn-secondary {
+  background: #444;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-resend {
+  padding: 5px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: rgba(39, 158, 155) !important;
+}
+.btn-resend:hover {
+  padding: 5px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: rgba(39, 158, 155) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: white !important;
+}
+
+.text-auth {
+  color: #279e9b;
+}

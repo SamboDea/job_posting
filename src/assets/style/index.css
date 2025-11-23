@@ -1,5 +1,9 @@
 @import "./components/header.css";
 @import "./components/them.css";
 @import "./components/home.css";
+@import "./components/widget.css";
+@import "./components/auth.css";
 
 @import "./components/dashboard/side-bar.css";
+
+@import "./components/swal/swal.css";
