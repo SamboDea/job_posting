@@ -6,7 +6,7 @@ const DashboardRoutes = () => {
   return (
     <Routes>
       <Route
-        path="/dashboard/*"
+        path="/*"
         element={
           // <ProtectedRoute>
           //   <Dashboard />

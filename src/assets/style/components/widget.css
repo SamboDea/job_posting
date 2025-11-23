@@ -1,0 +1,44 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --bg-trasparent: rgba(39, 158, 155);
+  --text-job-list: rgba(39, 158, 155);
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --bg-trasparent: transparent;
+  --text-job-list: #ffffff;
+}
+.form-control {
+  padding: 5px !important;
+  border: 2px solid rgba(39, 158, 155) !important;
+  border-radius: 8px !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: rgba(39, 158, 155) !important;
+}
+
+.form-control:focus {
+  background-color: transparent !important;
+  border-color: rgba(39, 158, 155) !important;
+  box-shadow: 0 0 4px rgba(39, 158, 155) !important;
+}
+
+.form-control::placeholder {
+  color: rgba(39, 158, 155) !important;
+}
+
+.btn-submit {
+  padding: 5px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: rgba(39, 158, 155) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: white !important;
+}

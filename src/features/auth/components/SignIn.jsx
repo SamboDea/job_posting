@@ -1,61 +1,53 @@
-import React, { useState } from "react";
-import img from "../../../assets/images/sign-in.png";
+import useAuth from "../action";
+import Input from "../../../widget/Input";
 import Logo from "../../../assets/images/logo-jb.png";
+import ButtonSubmit from "../../../widget/BunttonSubmit";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  const { login, handleLoginSubmit, handleLoginChange, loading } = useAuth();
 
   return (
-    <div className="signin-bg">
-      <div className="signin-card d-flex">
-        {/* LEFT SIDE IMAGE */}
-        <div className="signin-left">
-          <img src={img} alt="sign-in" />
-        </div>
+    <div className="container">
+      <div className="row justify-content-center align-items-center vh-100">
+        <div className="col-md-8 col-lg-4">
+          <div className="card shadow-auth">
+            <div className="card-body">
+              <div className="logo-auth">
+                <Link to={"/jobposting"}>
+                  <img src={Logo} alt="" />
+                </Link>
+              </div>
+              <h3 className="text-center text-auth mb-3">Sign In</h3>
 
-        {/* RIGHT SIDE FORM */}
-        <div className="signin-right">
-          <img src={Logo} alt="" />
-          <h3 className="text-center mb-4">Sign In</h3>
+              <form onSubmit={handleLoginSubmit}>
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  value={login.email}
+                  onChange={handleLoginChange}
+                />
 
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label className="form-label">Email</label>
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={login.password}
+                  onChange={handleLoginChange}
+                />
+
+                <ButtonSubmit loading={loading} label="Sign In" />
+
+                <p className="text-center mb-0">
+                  Don't have an account?{" "}
+                  <Link to="/jobposting/signup" className="text-color-sign">
+                    Sign Up
+                  </Link>
+                </p>
+              </form>
             </div>
-
-            <div className="mb-3">
-              <label className="form-label">Password</label>
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-
-            <button type="submit" className="btn btn-primary w-100 mt-2">
-              Sign In
-            </button>
-          </form>
-
-          <p className="text-center mt-3 signin-link">
-            Don’t have an account? <a href="#">Register</a>
-          </p>
+          </div>
         </div>
       </div>
     </div>

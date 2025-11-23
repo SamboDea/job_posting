@@ -1,112 +1,162 @@
-/* Background full screen */
-.signin-bg {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e9f7f6;
-  padding: 20px;
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --bg-trasparent: rgba(39, 158, 155);
+  --text-job-list: rgba(39, 158, 155);
+  --bg-auth: #ffffff;
+  --shadow-auth: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-/* Card container */
-.signin-card {
-  width: 900px;
-  background: #ffffff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
-  display: flex;
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --bg-trasparent: transparent;
+  --text-job-list: #ffffff;
+  --bg-auth: trasparent;
+  --shadow-auth: 0 0.5rem 1rem rgba(39, 158, 155);
 }
-
-/* Left side image */
-.signin-left {
-  width: 50%;
-  background: #dff5f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+.logo-auth {
+  margin: auto;
+  width: 100px;
+  height: 100px;
 }
-
-.signin-left img {
+.logo-auth img {
   width: 100%;
-  height: auto;
-  border-radius: 20px;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* Right side form */
-.signin-right {
-  width: 50%;
-  padding: 40px 50px;
+.text-auth {
+  color: rgba(39, 158, 155) !important;
+}
+.job-seeker {
+  width: 145px !important;
+  padding: 3px 25px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: rgba(39, 158, 155) !important;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.job-seeker:hover {
+  width: 145px !important;
+  padding: 3px 25px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: rgba(39, 158, 155) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: white !important;
+  text-align: center;
+  cursor: pointer;
 }
 
-.signin-right img {
-  width: 90px;
-  display: block;
-  margin: 0 auto 10px auto;
+.job-seeker.active {
+  width: 145px !important;
+  padding: 3px 25px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: rgba(39, 158, 155) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: white !important;
+  text-align: center;
+  cursor: pointer;
 }
-
-.signin-right h3 {
-  font-weight: 700;
-  color: #279e9b !important;
-}
-
-/* Input styling */
-.form-control {
-  height: 48px;
-  border-radius: 10px;
-  border: 1px solid #cbd7d6;
-  transition: 0.3s ease-in-out;
-}
-
-.form-control:focus {
-  border-color: #279e9b;
-  box-shadow: 0 0 0 0.15rem rgba(39, 158, 155, 0.25);
-}
-
-/* Button */
-.btn-primary {
-  background-color: #279e9b !important;
-  border-color: #279e9b !important;
-  height: 48px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #1d7b78 !important;
-  border-color: #1d7b78 !important;
-}
-
-/* Register link */
-.signin-link a {
-  color: #279e9b;
-  font-weight: 600;
+.text-color-sign {
+  color: rgba(39, 158, 155);
   text-decoration: none;
 }
-
-.signin-link a:hover {
-  text-decoration: underline;
+.card {
+  background-color: var(--bg-auth) !important;
+}
+.shadow-auth {
+  box-shadow: var(--shadow-auth);
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .signin-card {
-    flex-direction: column;
-    width: 100%;
-  }
+.otp-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
 
-  .signin-left,
-  .signin-right {
-    width: 100%;
-  }
+.otp-input {
+  width: 45px;
+  height: 50px;
+  text-align: center;
+  font-size: 22px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s;
+}
 
-  .signin-left img {
-    width: 80%;
-  }
+.otp-input:focus {
+  border-color: #279e9b;
+  transform: scale(1.05);
+}
 
-  .signin-right {
-    padding: 30px 25px;
-  }
+.verify-container {
+  max-width: 380px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background: #279e9b;
+}
+.btn-secondary {
+  background: #444;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-resend {
+  padding: 5px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: rgba(39, 158, 155) !important;
+}
+.btn-resend:hover {
+  padding: 5px !important;
+  border: 1px solid rgba(39, 158, 155) !important;
+  border-radius: 30px !important;
+  background-color: rgba(39, 158, 155) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  font-size: 1rem !important;
+  color: white !important;
+}
+
+.text-auth {
+  color: #279e9b;
 }
