@@ -1,41 +1,62 @@
+import React, { useState } from "react";
+import img from "../../../assets/images/sign-in.png";
+import Logo from "../../../assets/images/logo-jb.png";
+
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
-      <div
-        className="card p-4 shadow"
-        style={{ width: "380px", borderRadius: "16px" }}
-      >
-        <h3 className="text-center mb-4">Sign In</h3>
+    <div className="signin-bg">
+      <div className="signin-card d-flex">
+        {/* LEFT SIDE IMAGE */}
+        <div className="signin-left">
+          <img src={img} alt="sign-in" />
+        </div>
 
-        <form onSubmit="">
-          <div className="mb-3">
-            <label className="form-label">Email</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
+        {/* RIGHT SIDE FORM */}
+        <div className="signin-right">
+          <img src={Logo} alt="" />
+          <h3 className="text-center mb-4">Sign In</h3>
 
-          <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter your password"
-              required
-            />
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
 
-          <button type="submit" className="btn btn-primary w-100 mt-2">
-            Sign In
-          </button>
-        </form>
+            <div className="mb-3">
+              <label className="form-label">Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
 
-        <p className="text-center mt-3 mb-0">
-          Don't have an account? <a href="#">Register</a>
-        </p>
+            <button type="submit" className="btn btn-primary w-100 mt-2">
+              Sign In
+            </button>
+          </form>
+
+          <p className="text-center mt-3 signin-link">
+            Don’t have an account? <a href="#">Register</a>
+          </p>
+        </div>
       </div>
     </div>
   );

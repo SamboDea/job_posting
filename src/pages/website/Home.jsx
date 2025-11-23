@@ -51,7 +51,7 @@ const Home = () => {
             <div className="search-container position-relative mb-lg-0 mb-4">
               <input
                 type="text"
-                className="ms-4 search-input"
+                className="px-3 search-input"
                 placeholder="Search jobs..."
               />
               <i className="bi bi-search search-icon position-absolute top-50 start-0 translate-middle-y text-muted"></i>

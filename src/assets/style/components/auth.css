@@ -1,0 +1,112 @@
+/* Background full screen */
+.signin-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e9f7f6;
+  padding: 20px;
+}
+
+/* Card container */
+.signin-card {
+  width: 900px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+  display: flex;
+}
+
+/* Left side image */
+.signin-left {
+  width: 50%;
+  background: #dff5f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.signin-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Right side form */
+.signin-right {
+  width: 50%;
+  padding: 40px 50px;
+}
+
+.signin-right img {
+  width: 90px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.signin-right h3 {
+  font-weight: 700;
+  color: #279e9b !important;
+}
+
+/* Input styling */
+.form-control {
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid #cbd7d6;
+  transition: 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #279e9b;
+  box-shadow: 0 0 0 0.15rem rgba(39, 158, 155, 0.25);
+}
+
+/* Button */
+.btn-primary {
+  background-color: #279e9b !important;
+  border-color: #279e9b !important;
+  height: 48px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #1d7b78 !important;
+  border-color: #1d7b78 !important;
+}
+
+/* Register link */
+.signin-link a {
+  color: #279e9b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .signin-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .signin-left,
+  .signin-right {
+    width: 100%;
+  }
+
+  .signin-left img {
+    width: 80%;
+  }
+
+  .signin-right {
+    padding: 30px 25px;
+  }
+}
