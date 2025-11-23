@@ -109,7 +109,8 @@ const useAuth = () => {
 
       Swal.fire({
         icon: "success",
-        title: "Your work has been saved",
+        title: "Verification Successful!",
+        text: "Your account has been verified.",
         showConfirmButton: false,
         timer: 1500,
       }).then(() => navigate("/jobposting/signin"));
@@ -140,7 +141,8 @@ const useAuth = () => {
       });
       Swal.fire({
         icon: "success",
-        title: "Your work has been saved",
+        title: "Verification Code Sent!",
+        text: "A new OTP has been sent to your email.",
         showConfirmButton: false,
         timer: 1500,
       });
