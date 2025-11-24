@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,18 +21,18 @@ const Footer = () => {
             </p>
 
             <div className="footer-social">
-              <a href="#">
+              <Link to="">
                 <FaFacebookF />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="">
                 <FaLinkedinIn />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="">
                 <FaInstagram />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="">
                 <FaTwitter />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -40,16 +41,16 @@ const Footer = () => {
             <h5 className="footer-subtitle">Quick Links</h5>
             <ul className="footer-links">
               <li>
-                <a href="#">Home</a>
+                <Link to="">Home</Link>
               </li>
               <li>
-                <a href="#">Find Jobs</a>
+                <Link to="">Find Jobs</Link>
               </li>
               <li>
-                <a href="#">Companies</a>
+                <Link to="">Companies</Link>
               </li>
               <li>
-                <a href="#">Post a Job</a>
+                <Link to="">Post a Job</Link>
               </li>
             </ul>
           </div>
@@ -59,16 +60,16 @@ const Footer = () => {
             <h5 className="footer-subtitle">Categories</h5>
             <ul className="footer-links">
               <li>
-                <a href="#">IT & Software</a>
+                <Link to="">IT & Software</Link>
               </li>
               <li>
-                <a href="#">Design</a>
+                <Link to="">Design</Link>
               </li>
               <li>
-                <a href="#">Marketing</a>
+                <Link to="">Marketing</Link>
               </li>
               <li>
-                <a href="#">Sales</a>
+                <Link to="">Sales</Link>
               </li>
             </ul>
           </div>

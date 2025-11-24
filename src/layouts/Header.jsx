@@ -19,27 +19,7 @@ const Header = () => {
             <h3 className="d-none d-lg-block job-brand">JobPosting</h3>
           </Link>
 
-          <div className="d-flex align-items-center">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="d-block d-md-none">
-              <ThemeToggle />
-            </div>
-          </div>
-
-          <div
-            className="collapse navbar-collapse justify-content-end gap-4"
-            id="navbarNavAltMarkup"
-          >
+          <div className="justify-content-end gap-4" id="navbarNavAltMarkup">
             {storedUser ? (
               <Link
                 to="/profile"
@@ -52,7 +32,7 @@ const Header = () => {
                 <Link className="login text-docoration-none" to="signin">
                   Sign In
                 </Link>
-                <Link className="sign-up" to="signup">
+                <Link className="sign-up mx-lg-3" to="signup">
                   Sign Up
                 </Link>
               </>

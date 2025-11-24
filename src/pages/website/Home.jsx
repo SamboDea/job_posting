@@ -47,16 +47,16 @@ const Home = () => {
     <>
       <div className="container-fluid job-list-content position-sticky">
         <div className="container">
-          <div className="d-flex justify-content-between align-items-center mt-3">
-            <div className="d-flex gap-2 align-items-center">
-              <div
-                className="job-list-back align-items-center d-flex justify-content-center"
+          <div className="row mt-3 align-items-center">
+            <div className="col-lg-6 col-12 d-flex gap-2 align-items-center">
+              <button
+                className="job-list-back align-items-center d-flex justify-content-center border-0"
                 onClick={scrollLeft}
               >
                 <IoIosArrowBack />
-              </div>
+              </button>
 
-              <div className="job-scroll d-flex">
+              <div className="job-scroll d-flex" ref={scrollRef}>
                 <Link className="nav-link" to="/">
                   Web Developer
                 </Link>
@@ -77,15 +77,15 @@ const Home = () => {
                 </Link>
               </div>
 
-              <div
-                className="job-list-prev align-items-center d-flex justify-content-center"
+              <button
+                className="job-list-prev align-items-center d-flex justify-content-center border-0"
                 onClick={scrollRight}
               >
                 <IoIosArrowForward />
-              </div>
+              </button>
             </div>
 
-            <div className="job-filter">
+            <div className="job-filter col-lg-3">
               <button className="filter-toggle" onClick={toggleFilter}>
                 ស្វែងរកទីកន្លែងធ្វើការ
                 <span className={`fs-5 fw-bold arrow ${isOpen ? "open" : ""}`}>
@@ -101,7 +101,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="search-container position-relative mb-lg-0 mb-4">
+            <div className="col-lg-3 search-container position-relative mb-lg-0 mb-4">
               <input
                 type="text"
                 className="px-3 search-input"
@@ -112,61 +112,124 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="container home-bg mt-2">
-        <div className="row">
-          <div className="col-12 col-md-5">
+      <div className="container home-bg my-5">
+        <div className="row justify-content-between">
+          <div className="job-card col-12 col-lg-5">
+            {/* Top Section */}
             <div className="d-flex justify-content-between">
-              <div className="d-flex align-items-center">
-                <div className="home-image">
-                  <img src={Image} alt="" />
+              <div className="d-flex align-items-center gap-3">
+                <div className="job-card-logo">
+                  <img src={Image} alt="Company Logo" />
                 </div>
+
                 <div>
-                  <h2 className="short-text">@ReactJs</h2>
-                  <p className="lead text-mute">3 positions available</p>
+                  <h4 className="job-card-company">@ReactJs</h4>
+                  <p className="job-card-sub">3 positions available</p>
                 </div>
               </div>
-              <div>
-                <IoHeartOutline className="fs-2 mt-3" />
-                {/* <IoHeartSharp /> */}
+
+              <IoHeartOutline className="job-card-fav" />
+            </div>
+
+            {/* Title + Salary */}
+            <h3 className="job-card-title">Web Developer</h3>
+            <p className="job-card-salary">1000$ – 2000$</p>
+
+            {/* 2 Columns Info */}
+            <div className="row g-3 mt-2">
+              <div className="col-6">
+                <p className="info-label">Office</p>
+                <p className="info-value short-text">
+                  <FaLocationDot /> #6 ផ្លូវ 2004 សង្កាត់ទឹកថ្លា ខណ្ឌសែនសុខ
+                </p>
+              </div>
+
+              <div className="col-6">
+                <p className="info-label">Location</p>
+                <p className="info-value short-text">
+                  <FaLocationDot /> #6 ផ្លូវ 2004 សង្កាត់ទឹកថ្លា សែនសុខ
+                </p>
               </div>
             </div>
 
-            <div className="row">
-              <p className="fw-bold mb-0">Web Developer</p>
-              <p className="text-lgiht">1000$-2000$</p>
+            {/* Bottom */}
+            <div className="row g-3 mt-3">
               <div className="col-6">
-                <p className="fw-bold mb-0">Office</p>
-                <p className="mb-0 short-text">
-                  <FaLocationDot /> #6 ផ្លូវ 2004 សង្កាត់ទឹកថ្លា ខណ្ឌសែនសុខ
-                  រាជនីភ្នំពេញ
-                </p>
-              </div>
-              <div className="col-6">
-                <p className="fw-bold mb-0">Location</p>
-                <p className="mb-0 short-text">
-                  <FaLocationDot /> #6 ផ្លូវ 2004 សង្កាត់ទឹកថ្លា ខណ្ឌសែនសុខ
-                </p>
-              </div>
-            </div>
-            <div className="row mt-4">
-              <div className="col-6">
-                <p className="fw-bold mb-0">Closing Date</p>
-                <p className="mb-0 short-text">
+                <p className="info-label">Closing Date</p>
+                <p className="info-value">
                   <HiOutlineCalendarDateRange /> 13 NOV 2025
                 </p>
               </div>
+
               <div className="col-6">
-                <p className="fw-bold mb-0">Employement</p>
-                <p className="mb-0 short-text">
+                <p className="info-label">Employment</p>
+                <p className="info-value">
                   <PiHandbagSimpleFill /> Full-Time
                 </p>
               </div>
             </div>
-            <div className="d-flex py-3">
-              <button className="view-more">View More</button>
-            </div>
+
+            {/* Button */}
+            <button className="job-card-btn">View More</button>
           </div>
-          <div className="col-12 col-md-5"></div>
+          <div className="job-card col-12 col-lg-5">
+            {/* Top Section */}
+            <div className="d-flex justify-content-between">
+              <div className="d-flex align-items-center gap-3">
+                <div className="job-card-logo">
+                  <img src={Image} alt="Company Logo" />
+                </div>
+
+                <div>
+                  <h4 className="job-card-company">@ReactJs</h4>
+                  <p className="job-card-sub">3 positions available</p>
+                </div>
+              </div>
+
+              <IoHeartOutline className="job-card-fav" />
+            </div>
+
+            {/* Title + Salary */}
+            <h3 className="job-card-title">Web Developer</h3>
+            <p className="job-card-salary">1000$ – 2000$</p>
+
+            {/* 2 Columns Info */}
+            <div className="row g-3 mt-2">
+              <div className="col-6">
+                <p className="info-label">Office</p>
+                <p className="info-value short-text">
+                  <FaLocationDot /> #6 ផ្លូវ 2004 សង្កាត់ទឹកថ្លា ខណ្ឌសែនសុខ
+                </p>
+              </div>
+
+              <div className="col-6">
+                <p className="info-label">Location</p>
+                <p className="info-value short-text">
+                  <FaLocationDot /> #6 ផ្លូវ 2004 សង្កាត់ទឹកថ្លា សែនសុខ
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom */}
+            <div className="row g-3 mt-3">
+              <div className="col-6">
+                <p className="info-label">Closing Date</p>
+                <p className="info-value">
+                  <HiOutlineCalendarDateRange /> 13 NOV 2025
+                </p>
+              </div>
+
+              <div className="col-6">
+                <p className="info-label">Employment</p>
+                <p className="info-value">
+                  <PiHandbagSimpleFill /> Full-Time
+                </p>
+              </div>
+            </div>
+
+            {/* Button */}
+            <button className="job-card-btn">View More</button>
+          </div>
         </div>
       </div>
     </>
