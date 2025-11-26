@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           {/* Company */}
-          <div className="col-md-3 col-sm-6 mb-4">
+          <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
             <h5 className="footer-title">JobPosting</h5>
             <p className="footer-text">
               Find your dream job from thousands of opportunities. We connect
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="col-md-3 col-sm-6 mb-4">
+          <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
             <h5 className="footer-subtitle">Quick Links</h5>
             <ul className="footer-links">
               <li>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
 
           {/* Job Categories */}
-          <div className="col-md-3 col-sm-6 mb-4">
+          <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
             <h5 className="footer-subtitle">Categories</h5>
             <ul className="footer-links">
               <li>
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="col-md-3 col-sm-6 mb-4">
+          <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
             <h5 className="footer-subtitle">Contact Us</h5>
             <ul className="footer-contact">
               <li>Email: support@jobposting.com</li>

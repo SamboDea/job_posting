@@ -14,9 +14,12 @@ const Header = () => {
     <>
       <nav className="navbar navbar-expand-lg p-0 mt-1 shadow-mode">
         <div className="container">
-          <Link className="navbar-brand d-flex align-items-center" to="/home">
+          <Link
+            className="navbar-brand d-flex align-items-center justify-content-between"
+            to="/home"
+          >
             <img src={Logo} alt="Logo" className="logo-image img-fluid" />
-            <h3 className="d-none d-lg-block job-brand">JobPosting</h3>
+            <h3 className="d-none d-lg-block job-brand">JOBPOSTING</h3>
           </Link>
 
           <div className="justify-content-end gap-4" id="navbarNavAltMarkup">
@@ -29,10 +32,10 @@ const Header = () => {
               </Link>
             ) : (
               <>
-                <Link className="login text-docoration-none" to="signin">
+                <Link className="login text-decoration-none" to="/signin">
                   Sign In
                 </Link>
-                <Link className="sign-up mx-lg-3" to="signup">
+                <Link className="sign-up mx-lg-3" to="/signup">
                   Sign Up
                 </Link>
               </>

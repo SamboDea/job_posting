@@ -47,7 +47,7 @@ const Home = () => {
     <>
       <div className="container-fluid job-list-content position-sticky">
         <div className="container">
-          <div className="row mt-3 align-items-center">
+          <div className="row mt-3 align-items-center py-lg-2">
             <div className="col-lg-6 col-12 d-flex gap-2 align-items-center">
               <button
                 className="job-list-back align-items-center d-flex justify-content-center border-0"

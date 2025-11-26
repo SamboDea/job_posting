@@ -84,7 +84,7 @@
   min-width: 305px;
   padding: 6px;
   border: 2px solid #fff;
-  border-radius: 30px;
+  border-radius: 32px;
   background-color: transparent;
   transition: all 0.3s ease;
   outline: none;
@@ -141,20 +141,19 @@
 
 .job-filter {
   width: 100%;
-  margin: 10px 0;
 }
 
 .job-filter {
   position: relative;
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center !important;
 }
 
 .filter-toggle {
   width: 80%;
   padding: 12px 15px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 16px;
   font-weight: 600;
   background: var(--filter-bg);
@@ -205,7 +204,7 @@
 .job-card {
   background: var(--bg-color);
   border: 1px solid rgba(39, 158, 155, 0.25);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 22px;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -221,7 +220,7 @@
 .job-card-logo {
   width: 70px;
   height: 70px;
-  border-radius: 12px;
+  border-radius: 16px;
   background: #f8f8f8;
   display: flex;
   justify-content: center;
@@ -311,6 +310,15 @@
 /* ===========================
   GLOBAL RESPONSIVE SETTINGS
 =========================== */
+@media (max-width: 1281px) {
+  .job-card {
+    width: 560px !important;
+  }
+  .search-input,
+  .search-bg {
+    min-width: 275px !important;
+  }
+}
 
 @media (max-width: 992px) {
   .search-input,
@@ -343,7 +351,7 @@
 =========================== */
 @media (max-width: 835px) {
   .job-card {
-    min-width: 700px !important;
+    min-width: 710px !important;
   }
   .job-scroll {
     max-width: 550px;

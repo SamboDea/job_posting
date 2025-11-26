@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap");
 @import "./components/header.css";
 @import "./components/them.css";
 @import "./components/home.css";
@@ -7,3 +8,6 @@
 @import "./components/dashboard/side-bar.css";
 
 @import "./components/swal/swal.css";
+* {
+  font-family: "Battambang", system-ui;
+}

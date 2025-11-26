@@ -16,8 +16,8 @@
 }
 
 .logo-image {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
@@ -30,7 +30,7 @@
   color: #279e9b;
   text-decoration: none;
   padding: 8px 14px !important;
-  border-radius: 20px !important;
+  border-radius: 16px !important;
   border: 2px solid #279e9b !important;
 }
 
@@ -46,7 +46,8 @@
   text-decoration: none;
   color: white;
   padding: 8px 14px;
-  border-radius: 20px;
+  border: 2px solid #279e9b !important;
+  border-radius: 16px;
 }
 
 .shadow-mode {
@@ -71,6 +72,7 @@
     padding-bottom: 15px;
   }
   .sign-up {
+    border: none !important;
     background: none;
     color: rgba(39, 158, 155);
   }
